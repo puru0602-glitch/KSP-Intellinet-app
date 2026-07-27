@@ -44,3 +44,6 @@ const html = `<!doctype html>
 `;
 
 writeFileSync(path.join(outputDir, "index.html"), html, "utf8");
+if (existsSync(clientDir)) {
+  writeFileSync(path.join(clientDir, "index.html"), html, "utf8");
+}
